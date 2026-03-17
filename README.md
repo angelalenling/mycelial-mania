@@ -13,7 +13,7 @@ This project demonstrates core concepts in web development, including server-sid
 ![Home Page](Website_Screenshots/About_Us.png)
 
 ### Place Order
-![Admin Dashboard](Website_Screenshots/Place_Order_Success).png)
+![Admin Dashboard](Website_Screenshots/Place_Order_Success.png)
 
 ### Admin Dashboard
 ![Admin Dashboard](Website_Screenshots/Orders_Admin.png)
