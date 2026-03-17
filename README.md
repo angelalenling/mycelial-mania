@@ -7,6 +7,21 @@ This project demonstrates core concepts in web development, including server-sid
 
 ---
 
+## Screenshots  
+
+### Home Page
+![Home Page](Website_Screenshots/About_Us.png)
+
+### Place Order
+![Admin Dashboard](Website_Screenshots/Place_Order_Success).png)
+
+### Admin Dashboard
+![Admin Dashboard](Website_Screenshots/Orders_Admin.png)
+
+### Order Tracking
+![Order Tracking](Website_Screenshots/Order_Tracking.png)
+
+
 ## Features  
 
 - Order placement with input validation  
