@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: bisque;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 3.0em;
+  text-align: center;
+  color: rgb(71, 39, 17);
+}
+
+h2 {
+  font-size: 1.5em;
+  text-align: center;
+  color: rgb(141, 77, 35);
+}
+
+h3 {
+  font-size: 1.1em;
+  text-align: center;
+  color: rgb(164, 92, 44);
+}
+
+strong {
+  color: rgb(92, 46, 15);
+}
+
+em {
+  color: rgb(173, 63, 16);
+}
+
+nav {
+  background-color: #d19f6d;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 15px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-decoration: none;
+  border: 3px solid #180d01;
+  background-color: #5b2f04;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+nav ul li a:hover {
+  background-color: coral;
+}
+
+table {
+  background-color: #ffffff;
+  border: 2px solid #5b2f04;
+  width: 60%;
+  margin: auto;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+th,td {
+  padding: 5px 10px;
+  border: 1px solid #000000;
+}
+
+th {
+  background-color: #62979a;
+}
+
+tr:nth-child(even) {
+  background-color: #9fd1d3;
+}
+
+form {
+  background-color: #ffffff;
+  border: 2px solid #5b3608;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 40%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.search-form {
+  max-width: 25%;
+}
+
+.company-title {
+  font-family: 'Ubuntu', Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3.0em;
+  text-align: center;
+}
+
+.status-message {
+  font-size: 1.5em;
+  text-align: center;
+  color: rgb(141, 77, 35);
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about-section img {
+  width: 40%;
+  border-radius: 10px;
+}
+
+.company-description {
+  width: 40%;
+  background-color: #f5bc83;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.team-section {
+  display: grid;
+  /* https://www.w3schools.com/cssref/pr_grid-template-columns.php#:~:text=Definition%20and%20Usage,size%20of%20the%20respective%20column. */
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  margin: 20px auto;
+  gap: 15px;
+}
+
+.team-section div img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+
+.not-found {
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 75%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.order-tracking {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.order-tracking table{
+  background-color: #ffffff;
+  border: 2px solid #5b2f04;
+  width: 90%;
+  margin: auto;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+.order-details {
+  background-color: #ffffff;
+  border: 2px solid #5b3608;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 75%;
+  margin: 20px auto;
+}
+
+.order-form-section {
+    gap: 10px;
+    justify-content: center;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order-form-section textarea{
+    width: 30%;
+}
+
+
+.shipping-status {
+  background-color: #ffffff;
+  border: 2px solid #5b3608;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 75%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.track-link {
+    text-align: center;
+}
+
+.prefill-form {
+  padding: 10px;
+  border-radius: 8px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.shipping-countdown {
+  background-color: #ffffff;
+  border: 2px solid #5b3608;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 75%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.order-management {
+  background-color: #ffffff;
+  border: 2px solid #5b3608;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 75%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.order-actions {
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-params {
+  background-color: #ffffff;
+  border: 2px solid #5b3608;
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+  max-width: 25%;
+  margin: 20px auto;
+}
+
+a.track-link {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 5px 10px;
+  text-decoration: none;
+  border: 3px solid #1a0e01;
+  background-color: #5b2f04;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+  display: inline-block;
+}
+
+a.track-link:hover {
+  background-color: coral;
+}
+
+button {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 5px 10px;
+  text-decoration: none;
+  border: 3px solid #1a0e01;
+  background-color: #5b2f04;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+
+}
+
+button:hover {
+  background-color: coral
+}
+
+label {
+  font-weight: bold;
+}
+
+.order-actions {
+    align-items: center;
+}
+
+.order-actions form { 
+    margin: 0;
+    border: none;
+}
+
+#updateShipping { 
+    display: none; 
+    background-color: #ffffff;
+    border: 2px solid #5b2f04;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 700px;
+    text-align: left; 
+}
+
+#orderMessage { 
+  white-space: pre-wrap; 
+  max-width: 640px;
+  margin: 16px auto;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.7em;
+}
+
+#orderMessage.success{ 
+  color: #1b4332;
+ } 
+#orderMessage.error{ 
+  color: #611a15; white-space: pre-wrap; 
+} 
+
+#trackingMessage {
+  margin-bottom: 8px;
+  color: #5b2f04
+}
+
+#updateShipping button {
+  margin-top: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#updateShipping input[type="radio"] {
+  margin-right: 8px;
+}
+
+#updateShipping label[for="shipping"] {
+  display: block;
+  margin-top: 15px;
+}
+
+#updateShipping .shipping-options {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+#update, #cancelButton{
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #fff;
+  padding: 10px 20px;
+  border: 3px solid #1a0e01;
+  background-color: #5b2f04;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  min-width: 180px;
+}
+
+#update:hover, #cancelButton:hover {
+  background-color: coral;
+}
+
+#updateShipping .shipping-options {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 5px;
+}

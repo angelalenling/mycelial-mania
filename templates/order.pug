@@ -1,0 +1,64 @@
+//- https://html-to-pug.com/ used to convert HTML to Pug and edited
+extends layout
+
+block content
+  h1 Place an Order:
+  p#orderMessage
+  .prefill-form
+    button#prefillForm(type='button') Prefill Form
+  .order-form
+    form#orderForm(method='POST' action='/order')
+      section.order-form-section
+        label.label(for='product') Select Product:
+        select#product(name='product' required='')
+          option(value='') Product Selection
+          // data-* attribute usage method from https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Use_data_attributes
+          option(value='Mica Caps Mycelia Kit' data-cost='20') Mica Caps Mycelia Kit - $20
+          option(value='Turkey Tail Mycelia Kit' data-cost='30') Turkey Tail Mycelia Kit - $30
+          option(value='Penny Bun Mycelia Kit' data-cost='40') Penny Bun Mycelia Kit - $40
+          option(value='Shiitake Mycelia Kit' data-cost='50') Shiitake Mycelia Kit - $50
+          option(value='Signature Substrate' data-cost='35') Signature Substrate - $35
+          option(value='Growing Container' data-cost='25') Growing Container - $25
+          option(value='Harvesting Tool Kit' data-cost='30') Harvesting Tool Kit - $30
+      section.order-form-section
+        label(for='quantity') Quantity:
+        input#quantity(name='quantity' type='number' min='1' value='1' required='')
+      section.order-form-section
+        label(for='from') Purchaser Name:
+        input#from(name='from' type='text' placeholder='Your Name' value=customerName required='')
+      section.order-form-section
+        label(for='address') Recipient Name and Shipping Address:
+      section.order-form-section
+        textarea#address(name='address' rows='4' required='')
+      section.order-form-section
+        label(for='shipping') Shipping:
+        label
+          input(type='radio' name='shipping' value='Flat Rate' required='')
+          | Flat Rate (5-7 business days)
+        label
+          input(type='radio' name='shipping' value='Ground')
+          | Ground (3-5 business days)
+        label
+          input(type='radio' name='shipping' value='Expedited')
+          | Expedited (1-3 business days)
+      section.order-form-section
+        label
+          input#remember(type='checkbox', name='remember')
+          | Remember Me
+      section.order-form-section
+        h2 Order Summary:
+        p
+          strong Product:
+          span#summaryProduct ---
+        p
+          strong Quantity:
+          span#summaryQuantity ---
+        p
+          strong Cost:
+          |  $
+          span#summaryCost 0
+      input#cost(type='hidden' name='cost' value='')
+      input#order_date(type='hidden' name='order_date' value='')
+      section.order-form-section
+        button(type='submit') Submit Order
+  script(src='/js/order.js')

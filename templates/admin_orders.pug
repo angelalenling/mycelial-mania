@@ -1,0 +1,49 @@
+//- https://html-to-pug.com/ used to convert HTML to Pug and edited
+extends layout
+
+block content
+  h1 Admin Order Management
+  form.search-form(method='GET', action='/admin/orders')
+    input(type='text', name='query', placeholder='Buyer search', value=queryText)
+    select(name='status')
+      each stat in statuses
+        if stat === statusFilter
+          option(value=stat, selected) #{stat}
+        else
+          option(value=stat) #{stat}
+    button(type='submit') Search
+
+  .search-params
+    p
+      strong Searched for status:
+      |  #{statusFilter || 'all'}
+    p
+      strong Searched for buyer:
+      |  #{queryText || 'N/A'}
+
+  if orders.length === 0
+    .not-found
+      p
+        strong No orders found.
+  else
+    table
+      thead
+        tr
+          th Order ID
+          th Status
+          th Cost
+          th From
+          th Address
+          th Product
+          th Notes
+      tbody
+        each order in orders
+          tr
+            td
+              a(href='/tracking/' + order.id)= order.id
+            td= order.status
+            td= order.costText
+            td= order.from
+            td= order.address
+            td= order.product
+            td= order.notes

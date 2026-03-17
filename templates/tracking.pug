@@ -1,0 +1,59 @@
+//- https://html-to-pug.com/ used to convert HTML to Pug and edited
+extends layout
+
+block content
+  h1 Order Tracking
+  .order-tracking
+    .order-details
+      .shipping-status
+        h2.status-message #{shippingMessage}
+      h2 Order Details:
+      table
+        tbody
+          tr
+            th
+              strong Order ID:
+            td #{order.id}
+          tr
+            th
+              strong Product:
+            td #{order.product}
+          tr
+            th
+              strong Status:
+            td#status #{order.status}
+          tr
+            th
+              strong Cost:
+            td #{order.costText}
+          tr
+            th
+              strong Order Date:
+            td#orderDate #{order.order_date}
+  .shipping-countdown
+    .order-management
+      h2 Order Management
+      h3 Time remaining until order ships:
+      p#countdown Loading...
+    .order-actions
+      #trackingMessage
+      .cancel-section
+        button#cancelButton(type='button' data-order-id=order.id) Cancel Order
+      button#update(type='button') Update Shipping
+      form#updateShipping(method='POST' action='/update_shipping')
+        input(type='hidden' name='id' value=order.id)
+        label(for='address') New Shipping Address:
+        textarea#address(name='address', rows='4', required='')
+        label(for='shipping') New Shipping Method:
+        .shipping-options
+          label
+            input(type='radio' name='shipping' value='Flat Rate' required='')
+            | Flat Rate (5-7 business days)
+          label
+            input(type='radio' name='shipping' value='Ground')
+            | Ground (3-5 business days)
+          label
+            input(type='radio' name='shipping' value='Expedited')
+            | Expedited (1-3 business days)
+        button(type='submit') Update Shipping
+  script(src='/js/update.js')
